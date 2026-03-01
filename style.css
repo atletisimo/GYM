@@ -1,0 +1,100 @@
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #3e3e5e);
+    color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+
+
+/* Main */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+/* Workout Cards */
+section {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Inputs */
+input[type="text"], input[type="number"] {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    border-radius: 12px;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    color: #fff;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+/* Buttons */
+button {
+    background: #3e3e5e;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #3e3e5e;
+    transform: scale(1.05);
+}
+
+/* Workout List */
+ul#workouts {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+ul#workouts li {
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+ul#workouts li:hover {
+    transform: translateX(5px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: #aaa;
+    font-size: 0.9rem;
+}

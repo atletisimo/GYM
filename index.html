@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Workout Tracker</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>💪 Gym Workout Tracker</h1>
+
+<!-- ADD WORKOUT -->
+<section class="add-workout">
+    <h2>Add Workout</h2>
+    <input id="date" type="date">
+    <input id="exercise" placeholder="Exercise name">
+    <input id="sets" type="number" placeholder="Sets">
+    <input id="reps" type="number" placeholder="Reps">
+    <button id="addBtn">Add</button>
+</section>
+
+<!-- MAIN TABS -->
+<section class="main-tabs">
+
+
+    <!-- WEEKLY TAB -->
+    <div class="tab-content" id="weekly-tab">
+        <div class="week-tabs">
+            <div class="tabs">
+                <button class="day-btn" data-day="Monday">Monday</button>
+                <button class="day-btn" data-day="Tuesday">Tuesday</button>
+                <button class="day-btn" data-day="Wednesday">Wednesday</button>
+                <button class="day-btn" data-day="Thursday">Thursday</button>
+                <button class="day-btn" data-day="Friday">Friday</button>
+                <button class="day-btn" data-day="Saturday">Saturday</button>
+                <button class="day-btn" data-day="Sunday">Sunday</button>
+            </div>
+            <ul id="tab-content"></ul>
+        </div>
+    </div>
+
+    <!-- ALL WORKOUTS TAB -->
+    <div class="tab-content" id="all-tab" style="display:none;">
+        <h2>Workout Log</h2>
+        <ul id="list"></ul>
+    </div>
+
+    <!-- STATS TAB -->
+    <div class="tab-content" id="stats-tab" style="display:none;">
+        <h2>Stats</h2>
+        <p id="totalWorkouts"></p>
+        <p id="totalSets"></p>
+        <p id="totalReps"></p>
+    </div>
+</section>
+
+<script src="app.js"></script>
+<script src="notification.js"></script>
+<script src="db.js"></script>
+
+<script>
+    // Service Worker registration
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+            .then(reg => console.log('SW registered!', reg))
+            .catch(err => console.error('SW registration failed:', err));
+    }
+</script>
+
+</body>
+</html>
